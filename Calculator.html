@@ -2,7 +2,116 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Calculator</title>
+	
+	<style>
+	
+		body{
+			background-color: #242A4F;
+			margin:0;
+			margin-top:25px;
+			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			
+		
+		}
+		
+		#myCalculator{
+			margin-left: calc(50% - 200px);
+			pdding:0;
+		}
+		
+		#display{
+			width: 400px;
+			height:150px;
+			background-color: #F0F0F0;
+			border: none;
+			text-align: right;
+			margin:0;
+			padding: 0;
+			font-size: 32px;
+		}
+		
+		.inputRow{
+			margin:0;
+			padding: 0;
+			font-size:0;
+		}
+		
+		.operator1{
+			width: 200px;
+			height:100px;
+			margin: 0;
+			border: none;
+			background-color: #6D6D6D;
+			font-size: 32px;
+		}
+		
+		.operator1:hover{
+			background-color: #242A4F;
+			color: white;
+		}
+		
+		.operator1:active{
+			background-color: black;
+		}
+		
+		.operator{
+			width: 100px;
+			height: 100px;
+			margin:0;
+			border: none;
+			background-color: #979797;
+			font-size: 32px;
+		}
+		
+		.operator:hover{
+			background-color: #080A22;
+			color: white;
+		}
+		.operator:active{
+			background-color: black;
+		}
+		
+		.number{
+			width: 100px;
+			height: 100px;
+			background-color: lightgray;
+			border: none;
+			border-radius: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 32px;
+			
+			
+			
+		}
+		
+		.number:hover{
+			background-color: #242A4F;
+			color: white;
+		}
+		
+		.number:active{
+			background-color: black;
+		}
+		#clear{
+			background-color: ;
+			
+		}
+		
+		#clear:hover{
+			background-color: #131313;
+		}
+		#clear:active{
+			background-color: black;
+		}
+		
+		#zero{
+			width: 200px;
+		}
+		
+	</style>
+	
 </head>
 
 <body>
@@ -13,8 +122,8 @@
 			</div>
 			
 			<div class="inputRow">
-				<input type="button" class="operator" name="equals" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
-				<input type="button" class="operator" name="clear" value="clear" onclick="calculator.display.value=''">
+				<input type="button" id="clear" class="operator1" name="clear" value="C" onclick="calculator.display.value=''">
+				<input type="button" class="operator1" name="equals" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
 			</div>
 			
 			<div class="inputRow">
@@ -38,8 +147,9 @@
 			</div>
 			
 			<div class="inputRow">
-				<input type="button" class="number" value="0" onclick="calculator.display.value +='0'">
+				<input type="button" id="zero" class="number" value="0" onclick="calculator.display.value +='0'">
 				<input type="button" class="number" value="." onclick="calculator.display.value +='.'">
+				
 				<input type="button" class="operator" name="divide" value="/" onclick="calculator.display.value +='/'">
 			</div>
 				
